@@ -174,6 +174,8 @@ default: https://github.com/engineer-man/piston/releases/download/pkgs/index
 
 URL for repository index, where packages will be downloaded from.
 
+You can point this to your own package repository by setting the environment variable.
+
 ## Maximum Concurrent Jobs
 
 ```yaml

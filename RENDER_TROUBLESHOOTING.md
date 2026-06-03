@@ -185,6 +185,5 @@ docker run -it \
 ## Getting Help
 
 1. **Render Support**: render.com/support
-2. **Piston Issues**: https://github.com/engineer-man/piston/issues
-3. **Piston Discord**: https://discord.gg/engineerman
-4. **Check this guide first**: RENDER_DEPLOYMENT.md
+2. **Piston Documentation**: https://piston.readthedocs.io
+3. **Check this guide first**: RENDER_DEPLOYMENT.md

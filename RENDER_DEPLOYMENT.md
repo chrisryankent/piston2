@@ -131,7 +131,14 @@ Monitor CPU, memory, and network usage in Render dashboard under Service Analyti
 - Increase disk size in Service Settings
 - Consider which language packages are essential
 
-## Advanced Configuration
+## Package Repository
+
+By default, Piston uses the official package repository from GitHub releases. To use a custom repository:
+
+```bash
+# Set in Render environment variables
+PISTON_REPO_URL=https://your-repo.example.com/packages/index
+```
 
 ### Custom Domain
 
@@ -174,4 +181,3 @@ To rollback to a previous deployment:
 - [Piston Documentation](https://piston.readthedocs.io)
 - [Piston API Reference](./docs/api-v2.md)
 - [Render Documentation](https://render.com/docs)
-- [GitHub Repository](https://github.com/engineer-man/piston)

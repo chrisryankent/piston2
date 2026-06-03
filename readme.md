@@ -1,7 +1,5 @@
 <h1 align="center">
-    <a href="https://github.com/engineer-man/piston">
-        <img src="var/docs/images/piston.svg" valign="middle" width="58" height="58" alt="engineer-man piston" />
-    </a>
+    <img src="var/docs/images/piston.svg" valign="middle" width="58" height="58" alt="piston" />
     <span valign="middle">
         Piston
     </span>
@@ -12,15 +10,7 @@
 <br>
 
 <p align="center">
-    <a href="https://github.com/engineer-man/piston/commits/master">
-    <img src="https://img.shields.io/github/last-commit/engineer-man/piston.svg?style=for-the-badge&logo=github&logoColor=white"
-         alt="GitHub last commit">
-    <a href="https://github.com/engineer-man/piston/issues">
-    <img src="https://img.shields.io/github/issues/engineer-man/piston.svg?style=for-the-badge&logo=github&logoColor=white"
-         alt="GitHub issues">
-    <a href="https://github.com/engineer-man/piston/pulls">
-    <img src="https://img.shields.io/github/issues-pr-raw/engineer-man/piston.svg?style=for-the-badge&logo=github&logoColor=white"
-         alt="GitHub pull requests">
+    Piston - A high performance general purpose code execution engine.
 </p>
 
 ---
@@ -50,21 +40,20 @@
 
 <br>
 
-It's used in numerous places including:
+This high-performance execution engine can be used for:
 
--   [EMKC Challenges](https://emkc.org/challenges)
--   [EMKC Weekly Contests](https://emkc.org/contests)
--   [Engineer Man Discord Server](https://discord.gg/engineerman)
--   Web IDEs
--   200+ direct integrations
+-   Code challenge platforms
+-   Competitive programming contests
+-   Discord bots and chat integrations
+-   Web IDEs and online coding environments
+-   200+ potential integrations
 
 <br>
 
-### Official Extensions
+### Community Extensions
 
-The following are approved and endorsed extensions/utilities to the core Piston offering.
+The following are community-developed tools and wrappers for Piston:
 
--   [I Run Code](https://github.com/engineer-man/piston-bot), a Discord bot used in 4100+ servers to handle arbitrary code evaluation in Discord. To get this bot in your own server, go here: https://emkc.org/run.
 -   [Piston CLI](https://github.com/Shivansh-007/piston-cli), a universal shell supporting code highlighting, files, and interpretation without the need to download a language.
 -   [Node Piston Client](https://github.com/dthree/node-piston), a Node.js wrapper for accessing the Piston API.
 -   [Piston4J](https://github.com/the-codeboy/Piston4J), a Java wrapper for accessing the Piston API.
@@ -77,19 +66,18 @@ The following are approved and endorsed extensions/utilities to the core Piston 
 
 # Public API
 
--   Requires no installation but must obtain an authorization token to use it, see important note below on how to do this.
--   Reference the Runtimes/Execute sections below to learn about the request and response formats.
+To use a self-hosted or public instance of Piston, reference the Runtimes/Execute sections below to learn about the request and response formats.
 
 <br>
 
-When using the public Piston API, use the following two URLs:
+To use your own instance, use the following endpoints:
 
 ```
-GET  https://emkc.org/api/v2/piston/runtimes
-POST https://emkc.org/api/v2/piston/execute
+GET  https://your-piston-instance.com/api/v2/runtimes
+POST https://your-piston-instance.com/api/v2/execute
 ```
 
-> Important Note: The Piston API is no longer freely available to the public (as of Feb 15, 2026). To obain authorization, please reach out to EngineerMan on [Discord](https://discord.gg/engineerman). Authorization is only granted for non-commercial use (no paid products), low volume, and particular those in the educational space. Keys **are not** granted for individual projects, portfolio projects, university assignments, conceptual projects, vibe-coded ai slop projects, or projects that generally don't benefit anyone. I reserve complete discretion on key issuance. If a key is not issued, you are more than welcome to run your own instance of Piston, as it is open source, after all.
+> Note: You can self-host Piston using the deployment guides provided in this repository (Docker Compose, Kubernetes, Render, etc.). See the repository root for deployment documentation.
 
 <br>
 
@@ -108,7 +96,7 @@ POST https://emkc.org/api/v2/piston/execute
 
 ```sh
 # clone and enter repo
-git clone https://github.com/engineer-man/piston
+git clone https://github.com/yourusername/piston
 ```
 
 > [!NOTE]
@@ -142,8 +130,10 @@ docker run \
     -dit \
     -p 2000:2000 \
     --name piston_api \
-    ghcr.io/engineer-man/piston
+    piston:latest
 ```
+
+> Build the Docker image locally with: `docker build -f api/Dockerfile -t piston:latest .`
 
 ## Piston for testing packages locally
 

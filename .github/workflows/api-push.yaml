@@ -3,6 +3,7 @@ on:
     push:
         branches:
             - master
+            - main
             - v3
         paths:
             - api/**
@@ -14,12 +15,6 @@ jobs:
         steps:
             - name: Check out repo
               uses: actions/checkout@v3
-            - name: Login to GitHub registry
-              uses: docker/login-action@v2
-              with:
-                  username: ${{ github.actor }}
-                  password: ${{ secrets.GITHUB_TOKEN }}
-                  registry: docker.pkg.github.com
             - name: Login to ghcr.io
               uses: docker/login-action@v2
               with:
@@ -34,5 +29,5 @@ jobs:
                   push: true
                   pull: true
                   tags: |
-                      docker.pkg.github.com/engineer-man/piston/api
-                      ghcr.io/engineer-man/piston
+                      ghcr.io/${{ github.repository_owner }}/piston:latest
+                      ghcr.io/${{ github.repository_owner }}/piston:${{ github.sha }}
