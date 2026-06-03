@@ -6,13 +6,11 @@ services:
     region: oregon
     dockerfilePath: ./api/Dockerfile
     startCommand: /piston_api/src/docker-entrypoint.sh
-    env:
+    envVars:
       - key: PORT
         value: 2000
       - key: PISTON_LOG_LEVEL
         value: INFO
       - key: PISTON_DATA_DIRECTORY
         value: /piston
-    healthCheckPath: /
-    healthCheckInterval: 30
     autoDeploy: true
