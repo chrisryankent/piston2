@@ -5,9 +5,7 @@ services:
     plan: starter
     region: oregon
     dockerfilePath: ./api/Dockerfile
-    ports:
-      - port: 2000
-        protocol: TCP
+    startCommand: /piston_api/src/docker-entrypoint.sh
     env:
       - key: PORT
         value: 2000
@@ -15,9 +13,6 @@ services:
         value: INFO
       - key: PISTON_DATA_DIRECTORY
         value: /piston
-    rootDir: .
-    buildCommand: ""
-    startCommand: "/piston_api/src/docker-entrypoint.sh"
     healthCheckPath: /
     healthCheckInterval: 30
     autoDeploy: true
