@@ -1,0 +1,5 @@
+app = "piston-api"
+primary_region = "pdx"
+
+[build]
+dockerfile = "api/Dockerfile"
