@@ -5,7 +5,6 @@ services:
     plan: starter
     region: oregon
     dockerfilePath: ./api/Dockerfile
-    startCommand: /piston_api/src/docker-entrypoint.sh
     envVars:
       - key: PORT
         value: 2000
